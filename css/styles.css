@@ -1,0 +1,205 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #E0E0E0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #1F1F1F;
+    padding: 10px 0;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    color: #FFD700;
+}
+
+/* Product List Section */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px 10px;
+}
+
+.product-card {
+    background-color: #1E1E1E;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    padding: 20px;
+    color: #E0E0E0;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Product Image */
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-height: 250px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    opacity: 0.8;
+}
+
+/* Product Name */
+.product-name {
+    font-size: 1.7rem;
+    color: #FFD700;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+/* Product Description */
+.product-description {
+    color: #B0B0B0;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Product Price */
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4CAF50;
+    margin: 15px 0;
+}
+
+/* Buttons and Links */
+.view-details {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.view-details:hover {
+    background-color: #388E3C;
+}
+
+.add-to-cart {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #E64A19;
+}
+
+/* Cart Icon Styling */
+   .cart-link {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 10px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.cart-link:hover {
+    transform: scale(1.1);
+    background-color: #FFC107;
+}
+
+/* Cart Badge (item count) */
+.cart-link .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff4136;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for Logout Link */
+.cart-link.logout {
+    right: 70px; /* Adjust to ensure proper spacing */
+    background-color: #FF6F61;
+}
+
+.cart-link.logout:hover {
+    background-color: #E54C47;
+}
+
+/* User Icon Styling (Login Button) */
+.cart-link.user {
+    background-color: #4CAF50;
+}
+
+.cart-link.user:hover {
+    background-color: #45A049;
+}
+
+
+/* Quantity Input */
+.quantity {
+    width: 70px;
+    padding: 5px;
+    margin-top: 15px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #FFF;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
